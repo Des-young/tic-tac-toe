@@ -34,10 +34,12 @@ function checkGameStatus()  {
     let boardsFilled = true;
     for (let i = 0; i < 9; i++) {
       if (squareValue[i] === '') {
-        
+        boardsFilled = false;
       }
     }
-
+    if (boardsFilled === true) {
+      gameStatus = 'none'
+    }
   }
 
 
