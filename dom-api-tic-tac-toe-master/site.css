@@ -11,7 +11,7 @@ button {
   width: 402px;
 }
 
-#tic-tac-toe-board {
+#tic-tac-toe {
   display: grid;
   height: 400px;
   width: 400px;

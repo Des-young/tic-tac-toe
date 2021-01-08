@@ -1,78 +1,42 @@
-const currentPlayerSymbol = 'x';
-const squareValues = ['','','','','','','','',''];
-const gameStatus = '';
+// const currentPlayerSymbol = 'x';
+// const squareValues = ['','','','','','','','',''];
+// const gameStatus = '';
 
-const gameChecker = 
+// const gameChecker = 
 
-function checkGameStatus()  {
+// function checkGameStatus()  {
     
-}
+// }
 
-window.addEventListener('DOMContentloaded', event => {
+window.addEventListener('DOMContentLoaded', () => {
 
 document
-.getElementById('tic-tac-toe-board')
+.getElementById('tic-tac-toe')
 .addEventListener('click', event => {
-    console.log('I am clicked');
-  const targetId = event.target.id;
-  if (!targetId.startsWith('square-')) {
-    return
+  if (event.target.id.startsWith('square-')) {
+    console.log('I am clicked', event.target.id);
   }
-  const squareId = Number.parseInt(targetId[targetId.length - 1]);
+  
+  // const targetId = event.target.id;
+  // if (!targetId.startsWith('square-')) {
+  //   return
+  // }
+  // const squareId = Number.parseInt(targetId[targetId.length - 1]);
 
-  if (squareValues[squareId] !== '') return;
+  // if (squareValues[squareId] !== '') return;
   
-  const xImg = document.createElement('img');
-  xImg.src= 'https://assets.aaonline.io/Module-DOM-API/formative-project-tic-tac-toe/player-x.svg';
-  event.target.appendChild(xImg);
-  squareValues[squareId] = currentPlayerSymbol;
+  // const xImg = document.createElement('img');
+  // xImg.src= 'https://assets.aaonline.io/Module-DOM-API/formative-project-tic-tac-toe/player-x.svg';
+  // event.target.appendChild(xImg);
+  // squareValues[squareId] = currentPlayerSymbol;
   
-  if (currentPlayerSymbol === 'x') {
-    currentPlayerSymbol = 'o';
-  } else {
-    currentPlayerSymbol = 'x';
-  }
+  // if (currentPlayerSymbol === 'x') {
+  //   currentPlayerSymbol = 'o';
+  // } else {
+  //   currentPlayerSymbol = 'x';
+  // }
   
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 });
