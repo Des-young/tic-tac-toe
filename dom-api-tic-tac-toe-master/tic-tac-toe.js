@@ -1,5 +1,5 @@
-const currentPlayerSymbol = 'x';
-const squareValues = ['','','','','','','','',''];
+let currentPlayerSymbol = 'x';
+let squareValues = ['','','','','','','','',''];
 const gameStatus = '';
 
 const gameChecker = 
