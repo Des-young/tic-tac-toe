@@ -4,8 +4,8 @@ const gameStatus = '';
 
 const gameChecker = 
 
-const checkGameStatus = () => {
-    if ()
+function checkGameStatus()  {
+    
 }
 
 window.addEventListener('DOMContentloaded', event => {
