@@ -5,7 +5,28 @@ const gameStatus = '';
 const gameChecker = 
 
 function checkGameStatus()  {
-    
+    //Row Check
+    for (let i = 0; i < 9; i++) {
+      if (squareValues[i] !== '' 
+      && squareValues[i] === squareValues[i + 1] 
+      && squareValues[i] === squareValues[i + 2]) {  
+      gameStatus = squareValues[i].toUpperCase();
+
+      }   
+    }
+    //Column Check
+    for (let i = 0; i < 3; i++) {
+      if (squareValues[i] !== '' 
+      && squareValues[i] === squareValues[i + 3] 
+      && squareValues[i] === squareValues[i + 6]) {
+        gameStatus = squareValues[i].toUpperCase();
+      }
+      if (squareValues[0] !== '' 
+      && squareValues[0] === squareValues[4] 
+      && squareValues[0] === squareValues[8]) {
+        gameStatus = squareValues[0].toUpperCase();
+      } 
+}
 }
 
 window.addEventListener('DOMContentLoaded', () => {
