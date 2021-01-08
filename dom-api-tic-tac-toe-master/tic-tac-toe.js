@@ -26,12 +26,13 @@ document
   if (squareValues[squareId] !== '') return;
   
   const xImg = document.createElement('img');
-  xImg.src= 'https://assets.aaonline.io/Module-DOM-API/formative-project-tic-tac-toe/player-x.svg';
+  xImg.src= `https://assets.aaonline.io/Module-DOM-API/formative-project-tic-tac-toe/player-${currentPlayerSymbol}.svg`;
   event.target.appendChild(xImg);
   squareValues[squareId] = currentPlayerSymbol;
   
   if (currentPlayerSymbol === 'x') {
     currentPlayerSymbol = 'o';
+    console.log("can you see me");
   } else {
     currentPlayerSymbol = 'x';
   }
