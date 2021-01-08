@@ -1,6 +1,12 @@
 const currentPlayerSymbol = 'x';
 const squareValues = ['','','','','','','','',''];
+const gameStatus = '';
 
+const gameChecker = 
+
+const checkGameStatus = () => {
+    if ()
+}
 
 window.addEventListener('DOMContentloaded', event => {
 document.getElementById('tic-tac-toe-board');
