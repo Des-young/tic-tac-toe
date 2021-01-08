@@ -25,8 +25,25 @@ function checkGameStatus()  {
       && squareValues[0] === squareValues[4] 
       && squareValues[0] === squareValues[8]) {
         gameStatus = squareValues[0].toUpperCase();
-      } 
-}
+      } else if (squareValues[2] !== '' 
+      && squareValues[2] === squareValues[4] 
+      && squareValues[2] === squareValues[6]) {
+        gameStatus = squareValues[0].toUpperCase(); 
+      }
+    }
+    let boardsFilled = true;
+    for (let i = 0; i < 9; i++) {
+      if (squareValue[i] === '') {
+        
+      }
+    }
+
+  }
+
+
+if (gameStatus !== '') {
+  document.getElementById('game-status');
+  document.innerHTML = `Winner! ${gameStatus.toUpperCase()}`
 }
 
 window.addEventListener('DOMContentLoaded', () => {
