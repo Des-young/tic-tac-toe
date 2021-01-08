@@ -9,19 +9,21 @@ function checkGameStatus()  {
 }
 
 window.addEventListener('DOMContentloaded', event => {
-document.getElementById('tic-tac-toe-board');
-document.addEventListener('click', event => {
+
+document
+.getElementById('tic-tac-toe-board')
+.addEventListener('click', event => {
+    console.log('I am clicked');
   const targetId = event.target.id;
   if (!targetId.startsWith('square-')) {
     return
   }
-  const squareId = num.parseInt(targetId[targetId.length - 1]);
+  const squareId = Number.parseInt(targetId[targetId.length - 1]);
 
-  if (squareValues[squareId] !== '') {
-    return
-  }
-  const xImg = document.createEvent('img');
-  xImg.src= 'dom-api-tic-tac-toe-master/t-t-t-pics/player-x.svg';
+  if (squareValues[squareId] !== '') return;
+  
+  const xImg = document.createElement('img');
+  xImg.src= 'https://assets.aaonline.io/Module-DOM-API/formative-project-tic-tac-toe/player-x.svg';
   event.target.appendChild(xImg);
   squareValues[squareId] = currentPlayerSymbol;
   
